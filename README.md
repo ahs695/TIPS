@@ -1,6 +1,6 @@
 # The Indian Public Secondary School (TIPS) - Frontend Website
 
-This project contains the frontend website for **TIPS - The Indian Public Secondary School, Jaipur**. It has been refactored into a **production/deployment-grade directory structure** for optimal loading performance, maintainability, and clean code.
+This project contains the frontend website for **TIPS - The Indian Public Secondary School, Jaipur**. It has been refactored into **production/deployment-grade directory structure** for optimal loading performance, maintainability, and clean code.
 
 ## 📂 Project Structure
 
@@ -21,7 +21,7 @@ TIPS/
 
 ## 🚀 Key Improvements & Performance Benefits
 
-1. **Dramatic Code Size Reduction**: 
+1. **Dramatic Code Size Reduction**:
    - The initial `index.html` file was over **250KB** due to bloated inline styles and triple-duplicated base64-encoded image data.
    - The refactored `index.html` is now just **22KB** (a **91% reduction in file size**!), allowing it to download, parse, and render almost instantaneously.
 
@@ -40,12 +40,15 @@ TIPS/
 You can open `index.html` directly in any modern browser, or run a simple local server in this directory:
 
 ### Using Python:
+
 ```bash
 python -m http.server 8000
 ```
+
 Then visit `http://localhost:8000` in your web browser.
 
 ### Using Node.js (via `http-server` or `serve`):
+
 ```bash
 npx http-server
 ```
