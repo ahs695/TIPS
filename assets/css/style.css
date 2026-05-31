@@ -2234,19 +2234,36 @@ footer::before {
   }
 }
 @media (max-width: 768px) {
+  .fees-table-wrap {
+    margin: 0 -24px;
+    padding: 0 24px 20px;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .fees-table {
+    display: block;
+    width: auto;
+  }
   .fees-table thead {
     display: none;
   }
-  .fees-table, .fees-table tbody, .fees-table tr, .fees-table td {
-    display: block;
-    width: 100%;
+  .fees-table tbody {
+    display: flex;
+    gap: 16px;
   }
   .fees-table tr {
-    margin-bottom: 24px;
-    border: 1px solid var(--cream-dk);
-    border-radius: 16px;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    flex-shrink: 0;
     background: var(--white);
+    border: 1px solid var(--cream-dk);
+    border-radius: 20px;
+    overflow: hidden;
+    scroll-snap-align: center;
     box-shadow: var(--shadow-sm);
   }
   .fees-table td {
@@ -2254,8 +2271,8 @@ footer::before {
     justify-content: space-between;
     align-items: center;
     padding: 14px 20px;
-    text-align: right;
     border-bottom: 1px solid var(--cream-dk);
+    text-align: right;
     font-size: 0.95rem;
   }
   .fees-table td::before {
@@ -2265,7 +2282,6 @@ footer::before {
     font-size: 0.72rem;
     text-transform: uppercase;
     text-align: left;
-    letter-spacing: 0.02em;
   }
   .fees-table td:first-child {
     background: var(--grad-crimson);
@@ -2273,7 +2289,8 @@ footer::before {
     justify-content: center;
     text-align: center;
     font-size: 1.15rem;
-    padding: 16px;
+    padding: 20px;
+    border-bottom: none;
   }
   .fees-table td:first-child::before {
     display: none;
