@@ -1449,10 +1449,22 @@ section {
 }
 @media (max-width: 640px) {
   .star-students { grid-template-columns: repeat(2, 1fr); }
-  .subj-row { grid-template-columns: 1fr 1fr 0.6fr; }
-  .subj-row > span:nth-child(4),
-  .subj-row > span:nth-child(5),
-  .subj-row > span:nth-child(6) { display: none; }
+  .subj-row { 
+    grid-template-columns: 1.2fr 1fr 0.6fr; 
+    row-gap: 8px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+  .subj-header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .subj-header > span:nth-child(4),
+  .subj-header > span:nth-child(5),
+  .subj-header > span:nth-child(6) { 
+    display: none; 
+  }
+
   .subject-toppers-wrap { padding: 18px 16px; }
   .class10-block { padding: 24px 18px; }
 }
