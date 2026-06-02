@@ -2440,7 +2440,24 @@ footer::before {
 }
 
 @media (max-width: 768px) {
+  #news {
+    padding: 60px 0;
+  }
   .news-grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px 24px 40px;
+    margin: 0 -24px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .news-grid::-webkit-scrollbar {
+    display: none;
+  }
+  .news-item {
+    flex: 0 0 280px;
+    scroll-snap-align: center;
   }
 }
