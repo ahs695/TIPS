@@ -2395,3 +2395,52 @@ footer::before {
     border-bottom: none;
   }
 }
+
+
+/* ------------------------------------------
+   NEWS / PRESS
+   ------------------------------------------ */
+#news {
+  background: var(--white);
+  padding: 100px 0;
+}
+.news-header {
+  margin-bottom: 60px;
+}
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+}
+.news-item {
+  background: var(--white);
+  padding: 12px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--cream-dk);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  overflow: hidden;
+  cursor: zoom-in;
+}
+.news-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: calc(var(--radius) - 6px);
+  filter: sepia(20%) contrast(1.05); /* Newspaper feel */
+  transition: all 0.4s ease;
+}
+.news-item:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--gold-lt);
+}
+.news-item:hover img {
+  filter: sepia(0%) contrast(1.1);
+}
+
+@media (max-width: 768px) {
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+}
