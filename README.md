@@ -1,6 +1,5 @@
 # TIPS – The Indian Public Secondary School, Jaipur
 
-[![Website Status](https://img.shields.io/website?url=http%3A%2F%2F127.0.0.1%3A5500&logo=googlechrome&logoColor=white)](http://127.0.0.1:5500)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A premium, fully responsive, and high-performance website for **The Indian Public Secondary School (TIPS)**, Jaipur. Built with a modern aesthetic that celebrates traditional Indian school values through a "Crimson and Gold" design language.
@@ -26,7 +25,7 @@ A premium, fully responsive, and high-performance website for **The Indian Publi
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/TIPS.git
+   git clone https://github.com/ahs695/TIPS.git
    cd TIPS
    ```
 
@@ -59,6 +58,7 @@ The enquiry form uses Google Apps Script to save data to a spreadsheet.
 │   └── images/            # Optimized assets and photographs
 ├── index.html             # Main entry point with semantic HTML5
 ├── GoogleAppsScript.js    # Backend script for spreadsheet integration
+├── CLAUDE.md              # Guidance for Claude Code AI assistant
 └── README.md              # Project documentation
 ```
 
