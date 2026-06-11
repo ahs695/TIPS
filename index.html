@@ -681,16 +681,24 @@
           </p>
         </div>
 
-        <!-- Tab buttons -->
+        <!-- Tab buttons & Dropdown -->
         <div class="gallery-tabs" data-reveal>
-          <button class="gallery-tab active" data-tab="visits">🔬 Educational Visits</button>
-          <button class="gallery-tab" data-tab="functions">🎭 Annual Functions</button>
-          <button class="gallery-tab" data-tab="prize">🏆 Prize Distribution</button>
-          <button class="gallery-tab" data-tab="fun">🌿 Fun Outings</button>
+          <div class="gallery-buttons">
+            <button class="gallery-tab" data-tab="visits">🔬 Educational Visits</button>
+            <button class="gallery-tab active" data-tab="functions">🎭 Annual Functions</button>
+            <button class="gallery-tab" data-tab="prize">🏆 Prize Distribution</button>
+            <button class="gallery-tab" data-tab="fun">🌿 Fun Outings</button>
+          </div>
+          <select class="gallery-dropdown" id="gallerySelect">
+            <option value="visits">🔬 Educational Visits</option>
+            <option value="functions" selected>🎭 Annual Functions</option>
+            <option value="prize">🏆 Prize Distribution</option>
+            <option value="fun">🌿 Fun Outings</option>
+          </select>
         </div>
 
         <!-- Visits -->
-        <div class="gallery-panel active" id="tab-visits" data-reveal>
+        <div class="gallery-panel" id="tab-visits" data-reveal>
           <div class="gallery-grid-real">
             <div class="gallery-item-real large">
               <img src="assets/images/visit1.jpeg" alt="Educational Visit" loading="lazy" />
@@ -708,7 +716,7 @@
         </div>
 
         <!-- Functions -->
-        <div class="gallery-panel" id="tab-functions">
+        <div class="gallery-panel active" id="tab-functions" data-reveal>
           <div class="gallery-grid-real">
             <div class="gallery-item-real">
               <img src="assets/images/function1.jpeg" alt="Annual Function" loading="lazy" />

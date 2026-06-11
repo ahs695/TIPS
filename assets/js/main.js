@@ -90,12 +90,21 @@ function submitForm() {
     });
 }
 
-// Gallery tab switching
-document.querySelectorAll(".gallery-tab").forEach((btn) => {
-  btn.addEventListener("click", () => {
-    document.querySelectorAll(".gallery-tab").forEach((b) => b.classList.remove("active"));
-    document.querySelectorAll(".gallery-panel").forEach((p) => p.classList.remove("active"));
-    btn.classList.add("active");
-    document.getElementById("tab-" + btn.dataset.tab).classList.add("active");
-  });
+// Gallery tab & dropdown switching
+const galleryTabs = document.querySelectorAll(".gallery-tab");
+const galleryPanels = document.querySelectorAll(".gallery-panel");
+const gallerySelect = document.getElementById("gallerySelect");
+
+function switchGalleryTab(tabId) {
+  galleryTabs.forEach((b) => b.classList.toggle("active", b.dataset.tab === tabId));
+  galleryPanels.forEach((p) => p.classList.toggle("active", p.id === "tab-" + tabId));
+  if (gallerySelect) gallerySelect.value = tabId;
+}
+
+galleryTabs.forEach((btn) => {
+  btn.addEventListener("click", () => switchGalleryTab(btn.dataset.tab));
 });
+
+if (gallerySelect) {
+  gallerySelect.addEventListener("change", (e) => switchGalleryTab(e.target.value));
+}
