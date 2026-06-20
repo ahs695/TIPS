@@ -115,17 +115,19 @@ const adminData = {
     name: "Tariq Ali Siddiqui",
     role: "Director",
     photo: "assets/images/tariqsid2.png",
-    text: `Education is key industry which feeds all industries. No real progress is possible in any field of life without education. A man without education can be compared to a well furnished house without a lamp. The quality of education determines the quality of a nation. A high quality of life is supposed to raise the economic, social and political status of a country. Hence wise investment in education ensures the all round development of a country.
+    text: `<i>From Director's Pen</i><br><br>Education is key industry which feeds all industries. No real progress is possible in any field of life without education. A man without education can be compared to a well furnished house without a lamp. The quality of education determines the quality of a nation. A high quality of life is supposed to raise the economic, social and political status of a country. Hence wise investment in education ensures the all round development of a country.
 
     TIPS is proud to proclaim that it is maintaining its excellence and ascent under the able guidance of members of managing committee. Our teachers and members of the non-teaching staff are leaving no stone unturned in promoting social and cultural activities along with academics in our students. May the united efforts of our students and teachers continue in achieving the goals and ambitions of every student in today's competitive world.
 
-    I hope for a better tomorrow, So that the future of the nation can be carved in a perfect shape to bring peace and prosperity in this world.`
+    I hope for a better tomorrow, So that the future of the nation can be carved in a perfect shape to bring peace and prosperity in this world.
+    
+    <br>~ Tariq Ali Siddiqui`
   },
   principal: {
     name: "Farah Ahmad Siddiqui",
     role: "Principal",
     photo: "assets/images/fasid.png",
-    text: `Every child is unique and they learn in their unique style. Growing minds have infinite capacity to understand and grasp various skills. We at TIPS aim to develop knowledge, discipline confidence, excellence and a sense of responsibility amongst them.
+    text: `<i>From Principal's Desk</i><br><br>Every child is unique and they learn in their unique style. Growing minds have infinite capacity to understand and grasp various skills. We at TIPS aim to develop knowledge, discipline confidence, excellence and a sense of responsibility amongst them.
 
     The purpose of our school is to aid and accelerate the process of learning by providing an environment designed to encourage the Child's independent effort. Our primary goals are to build self-confidence and independence, to develop concentration and to nourish the love of learning. What we strive to provide is a solid launching pad upon which a child can propel himself to new heights of glory limited only by the individual's creativity and zest.
 
@@ -133,7 +135,9 @@ const adminData = {
 
     Enterprising parents have always been a source of inspiration and help. They provide the factual feed back mandatory to fill up the invisible loop holes.
 
-    I pray, we keep getting the co-operation from all quarters to make this institution one of the best in the Jaipur.`
+    I pray, we keep getting the co-operation from all quarters to make this institution one of the best in the Jaipur.
+    
+    <br>~ Farah Ahmad Siddiqui`
   },
   headmistress: {
     name: "Heena Kaousar",
@@ -161,7 +165,7 @@ function openAdminModal(type) {
   mPhoto.alt = data.name;
   mName.textContent = data.name;
   mRole.textContent = data.role;
-  mQuote.textContent = data.text;
+  mQuote.innerHTML = data.text;
 
   adminModal.classList.add("active");
   document.body.style.overflow = "hidden"; // Prevent scrolling
