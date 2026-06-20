@@ -204,7 +204,7 @@
           </p>
         </div>
         <div class="admin-grid">
-          <div class="admin-card" data-reveal>
+          <div class="admin-card" data-reveal onclick="openAdminModal('director')">
             <div class="admin-photo-wrap">
               <img src="assets/images/tariqsid2.png" alt="Tariq Ali Siddiqui" class="admin-photo" />
             </div>
@@ -213,7 +213,7 @@
               <p class="designation">Director</p>
             </div>
           </div>
-          <div class="admin-card" data-reveal>
+          <div class="admin-card" data-reveal onclick="openAdminModal('principal')">
             <div class="admin-photo-wrap">
               <img src="assets/images/fasid.png" alt="Farah Ahmad Siddiqui" class="admin-photo" />
             </div>
@@ -222,7 +222,7 @@
               <p class="designation">Principal</p>
             </div>
           </div>
-          <div class="admin-card" data-reveal>
+          <div class="admin-card" data-reveal onclick="openAdminModal('headmistress')">
             <div class="admin-photo-wrap">
               <img src="assets/images/heenak.png" alt="Heena Kausar" class="admin-photo" />
             </div>
@@ -966,6 +966,24 @@
         </div>
       </div>
     <div class="toast" id="toast"></div>
+
+    <!-- ADMIN MODAL -->
+    <div class="modal-overlay" id="adminModal">
+      <div class="modal-content">
+        <button class="modal-close" onclick="closeAdminModal()">&times;</button>
+        <div class="modal-header-accent"></div>
+        <div class="modal-body">
+          <div class="modal-admin-info">
+            <img src="" alt="" id="modalPhoto" class="modal-admin-photo">
+            <div class="modal-admin-text">
+              <h3 id="modalName"></h3>
+              <p class="designation" id="modalDesignation"></p>
+            </div>
+          </div>
+          <div class="modal-quote" id="modalQuote"></div>
+        </div>
+      </div>
+    </div>
 
     <script src="assets/js/main.js" defer></script>
   </body>

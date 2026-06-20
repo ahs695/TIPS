@@ -1023,6 +1023,7 @@ section {
     transform 0.3s ease,
     box-shadow 0.3s ease;
   border: 1px solid var(--cream-dk);
+  cursor: pointer;
 }
 .admin-card:hover {
   transform: translateY(-8px);
@@ -2514,5 +2515,126 @@ footer::before {
   }
   .gallery-item-real.large {
     grid-column: auto; /* Reset grid spans */
+  }
+}
+
+/* ══════════════════════════════════════════
+   ADMIN MODAL
+   ══════════════════════════════════════════ */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(28, 16, 8, 0.85);
+  backdrop-filter: blur(10px);
+  z-index: 2000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+.modal-content {
+  background: var(--white);
+  width: 100%;
+  max-width: 700px;
+  border-radius: 32px;
+  position: relative;
+  overflow: hidden;
+  transform: translateY(40px) scale(0.95);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.modal-overlay.active .modal-content {
+  transform: translateY(0) scale(1);
+}
+.modal-header-accent {
+  height: 8px;
+  background: var(--grad-crimson);
+}
+.modal-body {
+  padding: 48px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+.modal-admin-info {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid var(--cream-dk);
+  padding-bottom: 24px;
+}
+.modal-admin-photo {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--gold);
+  box-shadow: var(--shadow-sm);
+}
+.modal-admin-text h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  color: var(--crimson);
+  margin-bottom: 4px;
+}
+.modal-admin-text .designation {
+  font-family: "Fredoka One", cursive;
+  font-size: 1rem;
+  color: var(--gold-dk);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.modal-quote {
+  font-size: 1.15rem;
+  color: var(--ink);
+  line-height: 1.8;
+  white-space: pre-line;
+}
+.modal-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--cream);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--crimson);
+  font-size: 1.5rem;
+  transition: all 0.3s;
+  z-index: 10;
+}
+.modal-close:hover {
+  background: var(--crimson);
+  color: var(--white);
+  transform: rotate(90deg);
+}
+
+@media (max-width: 640px) {
+  .modal-body {
+    padding: 32px 24px;
+  }
+  .modal-admin-info {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+  .modal-admin-text h3 {
+    font-size: 1.5rem;
+  }
+  .modal-quote {
+    font-size: 1rem;
   }
 }
